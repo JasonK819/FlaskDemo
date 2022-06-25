@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<body>
+<p style="">车间数据预览及模型训练效果</p>
+{% for item in data %}
+     <p style="color:red">{{item}}</p>
+{% endfor %}
+<hr>
+<p><a href="/ ">回到首页</a></p>
+<p> <a href="{{ url_for('product.productpage') }}">去看数据分析</a></p>
+<hr>
+<p style="color: darkblue">模型训练loss函数</p>
+<img src="{{ url_for('static',filename='img/loss.jpg')}}" alt="" width="500px" height=auto>
+<p style="color: darkgreen">MSE:0.25</p>
+</body>
+</html>

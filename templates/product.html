@@ -1,0 +1,9 @@
+{% extends 'common.html' %}    #导入模板文件
+
+{% block title %}产品页面 {% endblock %}   #修改模板中的网页标题内容部分
+{% block container %}
+<div class="container">
+    <p>模型预测值与真实值拟合图</p>
+    <img src="{{ url_for('static',filename='img/Eli.jpg')}}" alt="" width="500px" height=auto>                <img src="{{ url_for('static',filename='img/punc.jpg')}}" alt="" width="500px" height=auto>
+</div>
+{% endblock %}

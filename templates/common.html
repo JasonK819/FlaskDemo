@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title {% endblock %} </title>
+    <style>
+         .header,.footer{height:35px;width:100%;margin:0 auto;background:#333;color:#f0f0f0;}
+         .header li{list-style:none;display:inline;width:300px;margin:0px 20px;}
+         .container{height:500px;width:100%;border:1px solid #f30;}
+         .footer{font-size:12px;text-align:center;height:20px;position: fixed;bottom: 0;}
+   </style>
+</head>
+<body>
+   {% block header %}
+       <div class="header">
+           <ul>
+               <li>首页</li>
+               <li>最新模型</li>
+               <li>数据需求</li>
+               <li>联系方式</li>
+           </ul>
+       </div>
+   {% endblock %}
+   {% block container %}
+       <div class="container">中部业务内容</div>
+   {% endblock %}
+   <br>
+   {% block footer %}
+       <div class="footer">
+            Made by KeChenxi,2022.联系方式：kechenxi_0819@whut.com
+       </div>
+   {% endblock %}
+</body>
+</html>
